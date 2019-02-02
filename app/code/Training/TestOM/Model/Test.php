@@ -13,29 +13,33 @@ class Test
 	private $arrayList;
 	private $name;
 	private $number;
+	private $managerFactory;
+	private $managerInterfaceFactory;
 
 
 	/**
 	 * Test constructor.
+	 * @param ManagerInterface $manager
 	 * @param $name
 	 * @param int $number
 	 * @param array $arrayList
+	 * @param ManagerFactory $managerFactory
+	 * @param ManagerInterfaceFactory $managerInterfaceFactory
 	 */
 	public function __construct(
 		\Training\TestOM\Model\ManagerInterface $manager,
 		$name,
 		int $number,
-		array $arrayList = []
+		array $arrayList = [],
+		\Training\TestOM\Model\ManagerFactory $managerFactory
 	)
 	{
 		$this->manager = $manager;
 		$this->name = $name;
 		$this->arrayList = $arrayList;
 		$this->number = $number;
+		$this->managerFactory = $managerFactory;
 	}
-
-
-
 
 	public function log()
 	{
@@ -46,5 +50,10 @@ class Test
 		print_r($this->number);
 		echo "<br>";
 		print_r($this->arrayList);
+
+		echo '<br>';
+		$managerFactory = $this->managerFactory->create();
+		print_r(get_class($managerFactory));
+
 	}
 }
