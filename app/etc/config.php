@@ -190,6 +190,17 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Temando_Shipping' => 1,
+        'Training_Controllers' => 1,
+        'Training_Dependency2' => 1,
+        'Training_Dependency' => 1,
+        'Training_DiFactory' => 1,
+        'Training_DiType' => 1,
+        'Training_DiTypeOverride' => 1,
+        'Training_Plugins' => 1,
+        'Training_Preference' => 1,
+        'Training_PreferenceOverride' => 1,
+        'Training_Rendering' => 1,
+        'Training_Test' => 1,
         'Vertex_Tax' => 1
     ]
 ];
