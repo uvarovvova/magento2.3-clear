@@ -8,4 +8,15 @@
 	<!--<type name="Magento\Catalog\Controller\Product\View">-->
 		<!--<plugin name="training_test_around" type="Training\Test\Plugin\Controller\Product\View" />-->
 	<!--</type>-->
+
+	<type name="Magento\Framework\App\RouterList">
+		<arguments>
+			<argument name="routerList" xsi:type="array">
+				<item name="custom" xsi:type="array">
+					<item name="class" xsi:type="string">Training\Test\App\NoRouteHandler</item>
+					<item name="sortOrder" xsi:type="string">100</item>
+				</item>
+			</argument>
+		</arguments>
+	</type>
 </config>
