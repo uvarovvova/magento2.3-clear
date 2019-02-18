@@ -5,6 +5,7 @@ namespace Training\Homework\Controller\Index;
 use Magento\Framework\App\Action\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\LayoutFactory;
+use Magento\Framework\Controller\Result\RawFactory;
 
 /**
  * Class Index
@@ -18,17 +19,25 @@ class Index extends Action
 	private $layoutFactory;
 
 	/**
+	 * @var RawFactory
+	 */
+	private $resultRawFactory;
+
+	/**
 	 * Index constructor.
 	 * @param Context $context
 	 * @param LayoutFactory $layoutFactory
+	 * @param RawFactory $resultRawFactory
 	 */
 	public function __construct(
 		Context $context,
-		LayoutFactory $layoutFactory
+		LayoutFactory $layoutFactory,
+		RawFactory $resultRawFactory
 	)
 	{
 		parent::__construct($context);
 		$this->layoutFactory = $layoutFactory;
+		$this->resultRawFactory = $resultRawFactory;
 	}
 
 	/**
@@ -38,6 +47,9 @@ class Index extends Action
 	{
 		$layout = $this->layoutFactory->create();
 		$block = $layout->createBlock('Training\Homework\Block\Test');
-		return $this->getResponse()->appendBody($block->toHtml());
+		$resultRaw = $this->resultRawFactory->create();
+		$resultRaw->setHeader('Content-Type', 'text/xml');
+		$resultRaw->setContents($block->toHtml());
+		return $resultRaw;
 	}
 }
