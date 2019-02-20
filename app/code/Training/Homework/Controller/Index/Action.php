@@ -7,6 +7,7 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\LayoutFactory;
 use Magento\Framework\Controller\Result\RawFactory;
 use Training\Homework\Block\Test;
+use Training\Homework\Block\TestTwo;
 
 /**
  * Class Index
@@ -46,7 +47,7 @@ class Action extends CoreAction
 	public function execute()
 	{
 		$layout = $this->layoutFactory->create();
-		$block = $layout->createBlock(Test::class);
+		$block = $layout->createBlock(TestTwo::class);
 		$block->setTemplate('Training_Homework::test.phtml');
 
 		/** @var \Magento\Framework\Controller\Result\Raw $resultRaw */
