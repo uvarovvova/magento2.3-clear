@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\homework\Block;
+namespace Training\Homework\Block;
 
 use Magento\Framework\View\Element\AbstractBlock;
 
