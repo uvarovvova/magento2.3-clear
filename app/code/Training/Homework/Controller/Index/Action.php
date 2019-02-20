@@ -6,6 +6,7 @@ use Magento\Framework\App\Action\Action as CoreAction;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\LayoutFactory;
 use Magento\Framework\Controller\Result\RawFactory;
+use Training\Homework\Block\TestTwo;
 
 /**
  * Class Index
@@ -44,13 +45,22 @@ class Action extends CoreAction
 	 */
 	public function execute()
 	{
+
+//		$layout = $this->layoutFactory->create();
+//		$block = $layout->createBlock(Test::class);
+//		$block->setTemplate('Training_Homework::test.phtml');
+//
+//		var_dump($block->toHtml());exit;
+//
+//		/** @var \Magento\Framework\Controller\Result\Raw $resultRaw */
+//		$resultRaw = $this->resultRawFactory->create();
+
+//		return $resultRaw->setContents($block->toHtml());
+
 		$layout = $this->layoutFactory->create();
-		$block = $layout->createBlock('Training\Homework\Block\Test');
-		$block->setTemplate('test.phtml');
-
-		/** @var \Magento\Framework\Controller\Result\Raw $resultRaw */
-		$resultRaw = $this->resultRawFactory->create();
-
-		return $resultRaw->setContents($block->toHtml());
+		$block = $layout->createBlock(TestTwo::class);
+		$block->setTemplate('Training_Homework::test.phtml');
+		$html = $block->toHtml();
+		return $this->resultRawFactory->create()->setContents($html);
 	}
 }
