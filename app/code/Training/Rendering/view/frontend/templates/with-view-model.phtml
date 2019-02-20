@@ -1,0 +1,16 @@
+<?php $viewModel = $block->getData('view_model');?>
+<?php // $viewModel = $block->getViewModel();?>
+
+<div style="border:green 2px solid;">
+<?= $fileName ?>
+    <br/>
+<?= get_class($this) ?>
+    <br/>
+<?= get_class($block) ?>
+    <br/>
+
+    <?php if ($viewModel->canShowLink()): ?>
+        <?= $viewModel->getActionUrl() ?>
+    <?php endif; ?>
+
+</div>

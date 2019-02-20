@@ -200,7 +200,8 @@ return [
         'Training_Plugins' => 0,
         'Training_Preference' => 0,
         'Training_PreferenceOverride' => 0,
-        'Training_Rendering' => 0,
+        'Training_RegistrationClose' => 1,
+        'Training_Rendering' => 1,
         'Vertex_Tax' => 1
     ]
 ];
