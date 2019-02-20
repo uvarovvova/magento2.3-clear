@@ -15,8 +15,8 @@ class Description
 	 */
 	public function beforeToHtml(CoreDescription $subject)
 	{
-//		$subject->getLayout()->createBlock(\Training\Homework\Block\Test::class);
-		$subject->setTemplate('Training_Homework::description.phtml');
-
+		if ($subject->getNameInLayout() == 'product.info.sku') {
+			$subject->setTemplate('Training_Homework::description.phtml');
+		}
 	}
 }
