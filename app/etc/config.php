@@ -196,12 +196,13 @@ return [
         'Training_DiFactory' => 0,
         'Training_DiType' => 0,
         'Training_DiTypeOverride' => 0,
-        'Training_Homework' => 1,
+        'Training_Js' => 1,
+        'Training_JsHomework' => 0,
         'Training_Plugins' => 0,
         'Training_Preference' => 0,
         'Training_PreferenceOverride' => 0,
-        'Training_RegistrationClose' => 1,
-        'Training_Rendering' => 1,
+        'Training_RegistrationClose' => 0,
+        'Training_UiComponents' => 1,
         'Vertex_Tax' => 1
     ]
 ];
