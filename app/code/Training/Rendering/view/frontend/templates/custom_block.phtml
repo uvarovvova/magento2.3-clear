@@ -1,0 +1,12 @@
+<div style="border:black 1px solid;">
+<?= $fileName ?>
+    <br/>
+<?= get_class($this) ?>
+    <br/>
+<?= get_class($block) ?>
+    <br/>
+    <?php if ($block->canShowLink()): ?>
+        <?= $block->getActionUrl() ?>
+    <?php endif; ?>
+xxxxxxxxxx
+</div>

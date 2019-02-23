@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <container name="root">
+        <block name="rendering-detail-block" template="Training_Rendering::parent.phtml">
+            <block name="rendering-detail-block-child" as="child-block" template="Training_Rendering::details.phtml"/>
+            <block class="Training\Rendering\Block\Custom" name="rendering-detail-block-child-custom" as="child-block-custom" template="Training_Rendering::custom_block.phtml"/>
+        </block>
+        <block class="Magento\Framework\View\Element\Template" name="rendering-detail-block-2" template="Training_Rendering::details.phtml"/>
+    </container>
+</layout>
+
+

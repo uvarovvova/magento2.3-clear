@@ -1,0 +1,13 @@
+<div style="border:black;">
+<?= $fileName ?>
+    <br/>
+<?= get_class($this) ?>
+    <br/>
+<?= get_class($block) ?>
+
+
+</div>
+
+<div style="color:red;">PARENT BLOCK</div>
+<div><?= $block->getChildHtml('child-block'); ?></div>
+<div><?= $block->getChildHtml('child-block-custom'); ?></div>
