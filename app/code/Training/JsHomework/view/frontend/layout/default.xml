@@ -5,5 +5,9 @@
 			<block class="Magento\Framework\View\Element\Template" name="layout-debug"
 			       template="Training_JsHomework::layout-debug.phtml"/>
 		</referenceContainer>
+		<referenceContainer name="content">
+			<block class="Magento\Framework\View\Element\Template" name="sidebar-review" before="-"
+			       template="Training_JsHomework::review.phtml"/>
+		</referenceContainer>
 	</body>
 </page>
