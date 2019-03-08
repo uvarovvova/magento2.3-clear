@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<block class="Magento\Framework\View\Element\Template" name="feedback-form"
+			       template="Training_Feedback::form.phtml" cacheable="false">
+				<arguments>
+					<argument name="view_model" xsi:type="object">Training\Feedback\ViewModel\Feedback</argument>
+				</arguments>
+			</block>
+			<block class="Training\Feedback\Block\FeedbackList" name="feedback_list"
+			       template="Training_Feedback::list.phtml">
+				<block class="Magento\Theme\Block\Html\Pager" name="feedback_list_pager"/>
+			</block>
+		</referenceContainer>
+	</body>
+</page>
