@@ -127,7 +127,7 @@ interface FeedbackInterface extends ExtensibleDataInterface
 	/**
 	 * Retrieve existing extension attributes object.
 	 *
-	 * @return FeedbackExtensionInterface|null
+	 * @return \Training\Feedback\Api\Data\FeedbackExtensionInterface|null
 	 */
 	public function getExtensionAttributes();
 

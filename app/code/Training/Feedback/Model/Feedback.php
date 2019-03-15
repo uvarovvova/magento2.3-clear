@@ -6,8 +6,9 @@ use Magento\Framework\Model\AbstractModel;
 use Training\Feedback\Api\Data\FeedbackInterface;
 use Training\Feedback\Model\ResourceModel\Feedback as ResoureFeedback;
 use Training\Feedback\Api\Data\FeedbackExtensionInterface;
+use Magento\Framework\Model\AbstractExtensibleModel;
 
-class Feedback extends AbstractModel implements FeedbackInterface
+class Feedback extends AbstractExtensibleModel implements FeedbackInterface
 {
 
 	const STATUS_ACTIVE = 1;
